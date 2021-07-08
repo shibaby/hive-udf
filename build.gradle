@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.togeek'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public'
+    }
+
+    maven {
+        url 'https://maven.aliyun.com/repository/spring-plugin'
+    }
+}
+
+dependencies {
+    implementation("org.apache.hive:hive-exec:2.1.1")
+}
+
+/*
+task "create-dirs" << {
+    sourceSets*.java.srcDirs*.each {
+        it.mkdirs()
+    }
+    sourceSets*.resources.srcDirs*.each{
+        it.midirs()
+    }
+}
+*/
